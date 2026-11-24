@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobNest | Find Your Dream Job</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-briefcase"></i> JobNest
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#jobs">Find Jobs</a></li>
+            <li><a href="#saved">Saved Jobs</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <button class="nav-btn" onclick="showAbout()">About</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-tag">YOUR CAREER STARTS HERE</span>
+            <h1>Find Your <span>Dream Job</span><br>Today.</h1>
+            <p>
+                Discover opportunities, connect with companies,
+                and take the next step in your professional journey.
+            </p>
+
+            <div class="search-box">
+                <div class="search-input">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="searchInput"
+                        placeholder="Job title, skills or company">
+                </div>
+
+                <div class="search-input">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" id="locationInput"
+                        placeholder="Location">
+                </div>
+
+                <button class="search-btn" onclick="searchJobs()">
+                    Search Jobs <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="stat">
+                <h3>Career</h3>
+                <p>Growth Opportunities</p>
+            </div>
+            <div class="stat">
+                <h3>Top</h3>
+                <p>Companies</p>
+            </div>
+            <div class="stat">
+                <h3>Explore</h3>
+                <p>New Possibilities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Section -->
+    <section class="jobs-section" id="jobs">
+
+        <div class="section-heading">
+            <div>
+                <span class="section-tag">CAREER OPPORTUNITIES</span>
+                <h2>Explore Latest Jobs</h2>
+                <p>Find opportunities that match your skills and ambitions.</p>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <select id="categoryFilter" onchange="filterJobs()">
+                <option value="">All Categories</option>
+                <option value="Development">Development</option>
+                <option value="Design">Design</option>
+                <option value="Data">Data & Analytics</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Management">Management</option>
+            </select>
+
+            <select id="typeFilter" onchange="filterJobs()">
+                <option value="">All Job Types</option>
+                <option value="Full Time">Full Time</option>
+                <option value="Part Time">Part Time</option>
+                <option value="Internship">Internship</option>
+                <option value="Remote">Remote</option>
+            </select>
+
+            <button class="clear-btn" onclick="clearFilters()">
+                <i class="fa-solid fa-rotate-left"></i> Clear Filters
+            </button>
+        </div>
+
+        <!-- Job Cards -->
+        <div class="job-container" id="jobContainer">
+            <!-- Jobs will be displayed using JavaScript -->
+        </div>
+
+    </section>
+
+    <!-- Saved Jobs Section -->
+    <section class="saved-section" id="saved">
+        <div class="section-heading">
+            <div>
+                <span class="section-tag">YOUR COLLECTION</span>
+                <h2>Saved Jobs</h2>
+                <p>Your bookmarked opportunities.</p>
+            </div>
+        </div>
+
+        <div class="job-container" id="savedContainer">
+            <p class="empty-message">No jobs saved yet. Bookmark jobs to see them here.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <i class="fa-solid fa-briefcase"></i> JobNest
+        </div>
+        <p>Discover opportunities. Build your future.</p>
+        <p class="copyright">&copy; 2026 JobNest. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
